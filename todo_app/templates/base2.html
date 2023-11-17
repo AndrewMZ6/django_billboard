@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+ADD ele
+{% endblock title %}
+
+{% block mainbody %}
+<h2>Add user</h2>
+<a href="/index"> to main </a>
+<form class="row g-3 needs-validation" novalidate action="/index/form_post/" method="post">
+  {% csrf_token %}
+  <label for="fname" class="form-label">Name:</label><br>
+  <input type="text" id="id_name" name="name_name" value="John" class="form-control"><br>
+  <label for="lname">Age:</label><br>
+  <input type="text" id="id_age" name="age_name" value=3><br><br>
+  <input type="submit" class="btn btn-secondary" value="Submit">
+  
+</form> 
+
+{% endblock mainbody %}

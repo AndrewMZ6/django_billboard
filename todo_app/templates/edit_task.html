@@ -1,0 +1,18 @@
+{% extends "base2.html" %}
+
+
+
+{% block mainbody %}
+<h2>Edit user</h2>
+<a href="/index"> to main </a>
+<form class="row g-3 needs-validation" novalidate action="/index/edit_task/{{task_id}}" method="post">
+  {% csrf_token %}
+  <label for="fname" class="form-label">Name:</label><br>
+  <input type="text" id="id_name" name="name_name" value="John" class="form-control"><br>
+  <label for="lname">Age:</label><br>
+  <input type="text" id="id_age" name="age_name" value=3><br><br>
+  <input type="submit" class="btn btn-secondary" value="Edit">
+  
+</form> 
+
+{% endblock mainbody %}
